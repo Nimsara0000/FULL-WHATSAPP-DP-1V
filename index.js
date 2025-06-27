@@ -1,17 +1,22 @@
-<form id="dpForm" action="/upload" method="post" enctype="multipart/form-data">
-  <label>📞 Phone Number:</label><br>
-  <input type="text" name="phone" required><br><br>
-
-  <label>🖼️ Upload DP Image:</label><br>
-  <input type="file" name="photo" accept="image/*" required><br><br>
-
-  <input type="hidden" name="code" id="code">
-  <button type="submit">🚀 Submit</button>
-</form>
-
-<script>
-  document.getElementById("dpForm").addEventListener("submit", function (e) {
-    const code = Math.random().toString(36).substring(2, 8);
-    document.getElementById('code').value = code;
-  });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp DP Updater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp DP Updater</h1>
+        <form id="dpForm" enctype="multipart/form-data">
+            <input type="file" id="image" accept="image/*" required>
+            <input type="text" id="phone" placeholder="WhatsApp Number" required>
+            <button type="submit">Generate QR Code</button>
+        </form>
+        <div id="qrCode"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</body>
+</html>
