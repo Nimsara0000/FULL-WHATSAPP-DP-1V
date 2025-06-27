@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WhatsApp DP Uploader</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; max-width: 600px; margin: auto; }
+    input, button { padding: 10px; margin: 10px 0; width: 100%; }
+  </style>
+</head>
+<body>
+  <h2>Upload WhatsApp DP</h2>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label>Upload Photo:</label><br>
+    <input type="file" name="dp" required /><br>
+    <label>WhatsApp Number:</label><br>
+    <input type="text" name="phone" placeholder="+947XXXXXXXX" required /><br>
+    <button type="submit">Pay & Submit</button>
+  </form>
+</body>
+</html>
